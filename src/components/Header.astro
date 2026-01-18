@@ -1,0 +1,19 @@
+---
+import { SITE_TITLE } from '../consts';
+import HeaderLink from './HeaderLink.astro';
+---
+
+<header class="bg-white/80 backdrop-blur-md sticky top-0 z-50 border-b border-emerald-100">
+	<nav class="max-w-4xl mx-auto px-4 h-16 flex items-center justify-between">
+		<h2 class="text-xl font-bold">
+			<a href="/" class="text-emerald-600 no-underline hover:text-emerald-700 transition-colors">
+				{SITE_TITLE}
+			</a>
+		</h2>
+		<div class="flex gap-6">
+			<HeaderLink href="/" class="text-slate-600 hover:text-emerald-600 no-underline font-medium transition-colors">首页</HeaderLink>
+			<HeaderLink href="/blog" class="text-slate-600 hover:text-emerald-600 no-underline font-medium transition-colors">博客</HeaderLink>
+			<HeaderLink href="/about" class="text-slate-600 hover:text-emerald-600 no-underline font-medium transition-colors">关于</HeaderLink>
+		</div>
+	</nav>
+</header>

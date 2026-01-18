@@ -1,0 +1,41 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
+import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
+---
+
+<!doctype html>
+<html lang="zh-cn">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+	</head>
+	<body class="bg-emerald-50/20">
+		<Header />
+		<main class="max-w-4xl mx-auto px-4 py-12">
+			<section class="mb-16">
+				<h1 class="text-4xl font-bold mb-4 text-emerald-600">🌿 你好，我是清新志</h1>
+				<p class="text-lg text-slate-600 leading-relaxed mb-6">
+					欢迎来到我的个人博客！我是一名大二软件工程专业的学生。这里是我记录技术成长足迹和捕捉生活中小确幸的地方。
+				</p>
+				<div class="flex gap-4">
+					<a href="/blog" class="bg-emerald-500 hover:bg-emerald-600 text-white px-6 py-2 rounded-full transition-colors no-underline">
+						浏览文章
+					</a>
+					<a href="/about" class="border border-emerald-500 text-emerald-600 hover:bg-emerald-50 px-6 py-2 rounded-full transition-colors no-underline">
+						关于我
+					</a>
+				</div>
+			</section>
+
+			<section>
+				<h2 class="text-2xl font-semibold mb-8 flex items-center gap-2">
+					<span class="w-1.5 h-8 bg-emerald-400 rounded-full"></span>
+					最新动态
+				</h2>
+				<p class="text-slate-500 italic">正在努力更新中，敬请期待...</p>
+			</section>
+		</main>
+		<Footer />
+	</body>
+</html>
